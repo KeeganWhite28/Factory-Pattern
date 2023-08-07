@@ -4,7 +4,18 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("What type of vehicle do you want to make? Car or Motorcycle?");
+            string userInput = Console.ReadLine();
+
+           VehicleFactory factory = new VehicleFactory();
+     IVehicle myVehilce = factory.CreateVehicle(userInput);
+
+            myVehilce.Drive();
+            Console.WriteLine("Lets make another vehicle.");
+
+            userInput = Console.ReadLine();
+
+            
         }
     }
 }
